@@ -21,11 +21,13 @@ figure:hover>img{transform:rotate(-12deg)}/* different rotation of figure and im
 figcaption{max-width:180px;text-align:center}
 a{text-decoration:none;color:#fcbb6d}
 a:hover{text-decoration:underline}
+.fade-in{animation:fade-in .2s;animation-timing-function:linear}
+@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
   </style>
 </head>
 <body>
   <main>
-    <figure>
+    <figure class="fade-in">
       <img width="180" height="180" alt="The logo of GRFCHN. It is a moon."
         src="logo.svg"/>
       <figcaption>
