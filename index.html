@@ -1,40 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="logo.svg" type="image/svg">
-  <meta name="description" content="GRFCHN">
-  <title>GRFCHN</title>
-  <style>
-/* TODO: Make better, can break on smol devices. Extend and put in new file */
-*{margin:0;padding:0;box-sizing:border-box}
-html{background:#0a0a0a;color:#fafafa}
-/* For better "branding" possible swap out to different/own font(?) */
-body{font-family:system-ui,sans-serif;width:100svw;height:100svh}
-main{height:100%;display:flex;align-items:center;justify-content:center}
-figure{border:2px solid #fafafa;border-radius:2rem;padding:2rem;/* In Out - Back */
-  transition-duration:.4s;transition-timing-function:cubic-bezier(0.68,-0.55,0.27,1.55)}
-figure>img{transition-duration:inherit;transition-timing-function:inherit}
-figure:hover{transform:scale(1.1) rotate(6deg)}/* I love the idea of the small */
-figure:hover>img{transform:rotate(-12deg)}/* different rotation of figure and img */
-figcaption{max-width:180px;text-align:center}
-a{text-decoration:none;color:#fcbb6d}
-a:hover{text-decoration:underline}
-  </style>
-</head>
-<body>
-  <main>
-    <figure>
-      <img width="180" height="180" alt="The logo of GRFCHN. It is a moon."
-        src="logo.svg"/>
-      <figcaption>
-        <h1>GRFCHN</h1>
-        <!-- TODO: Make the pages and uncomment the lines below -->
-        <!-- <p>Fun <a href="./projects/software/">software</a> &amp;
-          <a href="./projects/web/">websites</a></p> -->
-      </figcaption>
-    </figure>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="logo.svg" type="image/svg" />
+    <meta name="description" content="GRFCHN" />
+    <title>GRFCHN</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="hero full-screen">
+      <figure>
+        <img
+          width="180"
+          height="180"
+          alt="The logo of GRFCHN. It is a moon."
+          src="logo.svg"
+          fetchpriority="high"
+        />
+        <figcaption>
+          <h1>GRFCHN</h1>
+          <!-- TODO: Make the pages and uncomment the lines below -->
+          <h2>
+            Fun <a href="./projects/">projects</a>
+          </h2>
+        </figcaption>
+      </figure>
+    </main>
+  </body>
 </html>
