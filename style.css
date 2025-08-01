@@ -1,0 +1,60 @@
+/* TODO: Make better, can break on smol devices. Extend and put in new file */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #0a0a0a;
+  color: #fafafa;
+}
+
+/* For better "branding" possible swap out to different/own font(?) */
+body {
+  font-family: system-ui, sans-serif;
+}
+
+a {
+  color: #fcbb6d;
+}
+
+a:hover {
+  color: color-mix(in srgb, #fcbb6d 80%, #0a0a0a);
+}
+
+.full-screen {
+  min-width: 100svw;
+  min-height: 100svh;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero > figure {
+  border: 2px solid #fafafa;
+  border-radius: 2rem;
+  padding: 2rem;
+  transition-duration: 0.4s;
+  /* In Out - Back */
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.hero > figure > img {
+  /* Rounding the image so the hover interaction *looks* correctly */
+  border-radius: 100%;
+  transition-duration: inherit;
+  transition-timing-function: inherit;
+}
+
+.hero > figure > img:hover {
+  transform: rotate(-12deg) scale(1.02);
+}
+
+.hero > figure > figcaption {
+  max-width: 180px;
+  text-align: center;
+}
